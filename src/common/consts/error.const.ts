@@ -1,0 +1,9 @@
+export const ERROR_CODE = {
+  INTERNAL_SERVER_ERROR: 'INTERNAL_SERVER_ERROR',
+  BAD_REQUEST: 'BAD_REQUEST',
+  UNAUTHORIZED: 'UNAUTHORIZED',
+};
+export const ERROR_MESSAGE = {
+  INTERNAL_SERVER_ERROR: 'Internal server error',
+  BAD_REQUEST: 'Bad request',
+};
