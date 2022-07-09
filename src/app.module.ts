@@ -8,6 +8,7 @@ import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModuleOptions } from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 import { UserModule } from './app/user/user.module';
+import { LoggerModule } from "nestjs-pino";
 
 @Module({
   imports: [
@@ -35,6 +36,12 @@ import { UserModule } from './app/user/user.module';
           signOptions: appConfig.jwtAuthentication.signOptions,
         } as JwtModuleOptions;
       },
+    }),
+    LoggerModule.forRootAsync({
+      inject: [applicationConfig.KEY],
+      useFactory: (appConfig: ConfigType<typeof applicationConfig>) => ({
+        pinoHttp: appConfig.logger.pinoHttp,
+      }),
     }),
     UserModule,
   ],
