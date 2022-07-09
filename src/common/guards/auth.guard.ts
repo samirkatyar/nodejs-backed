@@ -27,7 +27,7 @@ export class AuthGuard implements CanActivate {
       const request = context.switchToHttp().getRequest() as Request & {
         user: { id: string; email: string };
       };
-      console.log(request)
+
       const isPublic = this.reflector.getAllAndOverride<boolean>(PUBLIC_KEY, [
         context.getHandler(),
         context.getClass(),
