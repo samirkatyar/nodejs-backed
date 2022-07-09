@@ -30,11 +30,9 @@ describe('AppController (e2e)', () => {
       .post('/user/signup')
       .send(payloadForSignUp);
 
-    const payloadForLogin: SignUp = {
+    const payloadForLogin: Login = {
       email: 'test@test.com',
       password: 'test',
-      firstName: 'test',
-      lastName: 'test',
     };
     const response = await request(app.getHttpServer())
       .post('/user/login')
@@ -176,6 +174,105 @@ describe('AppController (e2e)', () => {
       expect(response.body).toMatchObject({
         message: 'Invalid email or password',
       });
+    });
+  });
+
+  describe('Get Game List API (GET)', () => {
+    it('Get Game List API (GET), skip=0 & limit=10', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body?.length).toBeLessThanOrEqual(10);
+    });
+
+    it('Get Game List API (GET), skip=0 & limit=5', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=5')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body?.length).toBeLessThanOrEqual(5);
+    });
+
+    it('Get Game List API (GET), without skip and without limit', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body).toMatchObject({
+        statusCode: 400,
+        message: 'Validation failed (numeric string is expected)',
+      });
+    });
+
+    it('Get Game List API (GET), Without Access Token', async () => {
+      const response = await request(app.getHttpServer()).get(
+        '/game/list?skip=0&limit=10',
+      );
+
+      expect(response.statusCode).toBe(403);
+    });
+
+    it('Get Game List API (GET), With User Input On Game Name', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&name=Dogou')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+    });
+
+    it('Get Game List API (GET), With User Input On followers', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&followers=10')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+    });
+
+    it('Get Game List API (GET), With User Input On followers Invalid Input', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&followers=dsds')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.message).toBe('Invalid Input');
+    });
+
+    it('Get Game List API (GET), With User Input On rating', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&rating=5')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+    });
+
+    it('Get Game List API (GET), With User Input On rating Invalid Input', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&rating=dsds')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.message).toBe('Invalid Input');
+    });
+
+    it('Get Game List API (GET), With User Input On totalRating', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&totalRating=5')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+    });
+
+    it('Get Game List API (GET), With User Input On totalRating Invalid Input', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/list?skip=0&limit=10&totalRating=dsds')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body.message).toBe('Invalid Input');
     });
   });
 });

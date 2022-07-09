@@ -42,7 +42,6 @@ export class IgdbService {
       const oauthURL = `${this.appConfig.igDbSecret.oauthURL}client_id=${this.appConfig.igDbSecret.appClientId}&client_secret=${this.appConfig.igDbSecret.appClientSecret}&grant_type=client_credentials`;
 
       const response = await this.httpService.post(oauthURL);
-      console.log(response);
       this.authToken = response.data.access_token;
       this.updateExpireOfToken(response.data.expires_in);
     } catch (error) {

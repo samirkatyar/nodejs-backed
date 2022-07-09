@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   Body,
   Controller,
   Get,
@@ -13,6 +14,7 @@ import { IUser } from '../../common/interface/user';
 import { AddFavouriteGame } from './dto/add-favourite-game';
 import { GameService } from './game.service';
 import { GameEntity } from './game.entity';
+import { ERROR_CODE } from '../../common/consts/error.const';
 
 @Controller('game')
 export class GameController {
@@ -40,6 +42,16 @@ export class GameController {
     @Query('totalRating') totalRating?: number,
     @Query('name') name?: string,
   ): Promise<IgdbGame[]> {
+    if (
+      (followers && isNaN(parseInt(followers?.toString(), 10))) ||
+      (rating && isNaN(parseInt(rating?.toString(), 10))) ||
+      (totalRating && isNaN(parseInt(totalRating?.toString(), 10)))
+    ) {
+      throw new BadRequestException({
+        errorCode: ERROR_CODE.BAD_REQUEST,
+        message: 'Invalid Input',
+      });
+    }
     const query = {
       followers,
       rating,
