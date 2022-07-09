@@ -8,7 +8,8 @@ import { JwtModule } from '@nestjs/jwt';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { JwtModuleOptions } from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
 import { UserModule } from './app/user/user.module';
-import { LoggerModule } from "nestjs-pino";
+import { LoggerModule } from 'nestjs-pino';
+import { GameModule } from './app/game/game.module';
 
 @Module({
   imports: [
@@ -44,6 +45,7 @@ import { LoggerModule } from "nestjs-pino";
       }),
     }),
     UserModule,
+    GameModule,
   ],
   controllers: [AppController],
   providers: [AppService, { provide: 'APP_PIPE', useClass: ValidationPipe }],

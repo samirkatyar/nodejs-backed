@@ -32,6 +32,13 @@ export const applicationConfig = registerAs('ENV_VARIABLES', () => ({
       },
     },
   },
+
+  igDbSecret: {
+    baseURL: process.env.IGDB_API_BASE_URL,
+    oauthURL: process.env.OAUTH_TOKEN_URL,
+    appClientId: process.env.CLIENT_ID,
+    appClientSecret: process.env.CLIENT_SECRET,
+  },
 }));
 
 export default applicationConfig;
