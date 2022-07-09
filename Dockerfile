@@ -6,4 +6,4 @@ RUN ["npm", "cache", "clean", "-f"]
 
 COPY . .
 RUN ["npm", "run","build"]
-CMD ["node", "dist/main.js"]
+CMD ["node", "./dist/main.js"]
