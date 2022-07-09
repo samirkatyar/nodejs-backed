@@ -26,7 +26,9 @@ import { AuthGuard } from './common/guards/auth.guard';
         synchronize: false,
         url: appConfig.postgres.url,
         autoLoadEntities: true,
-        ssl: false,
+        ssl: {
+          rejectUnauthorized: false
+        },
       }),
     }),
     JwtModule.registerAsync({

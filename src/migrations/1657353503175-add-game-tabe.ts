@@ -1,7 +1,7 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
 export class AddGameTable implements MigrationInterface {
-  name = 'AddGameTable';
+  name = 'AddGameTable1657366114641';
 
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.query(

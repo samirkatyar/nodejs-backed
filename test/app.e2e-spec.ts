@@ -275,4 +275,65 @@ describe('AppController (e2e)', () => {
       expect(response.body.message).toBe('Invalid Input');
     });
   });
+
+  describe('Get My Games API (GET)', () => {
+    it('Get My Games API (GET), With Valid Input', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/my-games?skip=0&limit=10')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body?.length).toBeLessThanOrEqual(10);
+    });
+
+    it('Get My Games API (GET), With Invalid Input', async () => {
+      const response = await request(app.getHttpServer())
+        .get('/game/my-games?skip=dsda&limit=dsa')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+    });
+  });
+
+  describe('Add favourite game (PUT)', () => {
+    it('Add favourite game, With Valid Name', async () => {
+      console.log(token);
+      const response = await request(app.getHttpServer())
+        .put('/game/addToFavorites')
+        .set('x-access-token', token)
+        .send({ name: 'City Mysteries' });
+
+      expect(response.statusCode).toBe(200);
+      expect(response.body?.name).toBe('City Mysteries');
+    });
+
+    it('Add favourite game, With Invalid Name', async () => {
+      console.log(token);
+      const response = await request(app.getHttpServer())
+        .put('/game/addToFavorites')
+        .set('x-access-token', token)
+        .send({ name: 'Invalid City Mysteries' });
+
+      expect(response.statusCode).toBe(400);
+      expect(response.body?.message).toBe('Game with that name not found!');
+    });
+
+    it('Add favourite game, Without Name', async () => {
+      console.log(token);
+      const response = await request(app.getHttpServer())
+        .put('/game/addToFavorites')
+        .set('x-access-token', token);
+
+      expect(response.statusCode).toBe(400);
+    });
+
+    it('Add favourite game, Without Token', async () => {
+      console.log(token);
+      const response = await request(app.getHttpServer())
+        .put('/game/addToFavorites')
+        .send({ name: 'City Mysteries' });
+
+      expect(response.statusCode).toBe(403);
+    });
+  });
 });
