@@ -1,10 +1,13 @@
 {
-    "type": "postgres",
-    "url": "postgres://postgres:postgres@localhost:5432",
-    "database": "postgres",
-    "entities": ["./dist/**/*.entity.js"],
-    "cli": {
-        "migrationsDir": "src/migrations/"
-    },
-    "migrations": ["dist/migrations/*.js"]
+  "type": "postgres",
+  "url": "postgres://postgres:postgres@localhost:5432",
+  "database": "postgres",
+  "ssl": {
+    "rejectUnauthorized": false
+  },
+  "entities": ["./dist/**/*.entity.js"],
+  "cli": {
+    "migrationsDir": "src/migrations/"
+  },
+  "migrations": ["dist/migrations/*.js"]
 }

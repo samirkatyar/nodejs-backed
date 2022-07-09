@@ -1,0 +1,2026 @@
+{
+	"info": {
+		"_postman_id": "b79183ca-106e-42bd-af60-94915586f3dd",
+		"name": "Game-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17662190"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\",\n    \"firstName\":\"test\",\n    \"lastName\":\"test\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user/signup",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Already Register",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\",\n    \"firstName\":\"test\",\n    \"lastName\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:06:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2f-5X6uv7wNt3w7BM0UNCDTzCWpFXQ\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "201"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7281f69839bd3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You have registered successfully.\"\n}"
+				},
+				{
+					"name": "Register Successfully : 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\",\n    \"firstName\":\"test\",\n    \"lastName\":\"test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:15:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "47"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2f-5X6uv7wNt3w7BM0UNCDTzCWpFXQ\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "201"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728203955a323223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"You have registered successfully.\"\n}"
+				},
+				{
+					"name": "Missing Details",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/signup",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:15:52 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "172"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"ac-wmK/OZ20QLQ1wxS8fVHsSj1sNmw\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7282047c9a5d3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"firstName should not be empty\",\n        \"firstName must be a string\",\n        \"lastName should not be empty\",\n        \"lastName must be a string\"\n    ],\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/user/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login Successfully : 200",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:16:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "434"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1b2-2UUVgUPeSG8by/V/RKbQF8fFSS0\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "201"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72820603e9c23223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user\": {\n        \"firstName\": \"test\",\n        \"lastName\": \"test\",\n        \"email\": \"test@test.com\"\n    },\n    \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI0YjE3YmYzYi1kNzQ5LTRmNWYtOGY0Yy0wYTQxMTQxMGJmYzUiLCJlbWFpbCI6InRlc3RAdGVzdC5jb20iLCJpYXQiOjE2NTczNzk4MTYsImV4cCI6MTY1NzYzOTAxNn0.AV3iapfAkwkL0eX8BrkoXGJ_2U6flXCOGXpCSfLD-z4pRPLIuqzK1FWmfu0FGDnCGfwRX72YwHHDwkVBzqLzct76RBR-vLea2_frPgeth4YXu9syt-h1UnAwtVV5x4pdppCwxmGqUcJOhm2QAZW_YzypAEtKDNgwdhJ1pzASxxc\"\n}"
+				},
+				{
+					"name": "Login : Invalid credentials",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\",\n    \"password\":\"test@1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:17:28 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"42-OMQwL3pC44yooDXAVy5Djh0TPZY\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "401"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728206caae303223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"UNAUTHORIZED\",\n    \"message\": \"Invalid email or password\"\n}"
+				},
+				{
+					"name": "Login : Missing Details",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"test@test.com\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/user/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:18:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "111"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"6f-QveiucPmwr/tAqptZhurFoSuScA\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728208f61b7b3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"password should not be empty\",\n        \"password must be a string\"\n    ],\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Game List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{BASE_URL}}/game/list?skip=1&limit=10&followers=40&rating=10&totalRating=5&name=City",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"game",
+						"list"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "followers",
+							"value": "40"
+						},
+						{
+							"key": "rating",
+							"value": "10"
+						},
+						{
+							"key": "totalRating",
+							"value": "5"
+						},
+						{
+							"key": "name",
+							"value": "City"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Game List : 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/game/list?skip=1&limit=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "followers",
+									"value": "fsfds",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:20:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"27b1-MZYoqw9xpQYAf9oXM38tUhLdbJQ\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72820ab138a53223-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 40104,\n        \"category\": 0,\n        \"created_at\": 1498435200,\n        \"first_release_date\": 536457600,\n        \"genres\": [\n            {\n                \"id\": 5,\n                \"name\": \"Shooter\",\n                \"url\": \"https://www.igdb.com/genres/shooter\"\n            }\n        ],\n        \"name\": \"Dogou Souken\",\n        \"platforms\": [\n            {\n                \"id\": 52,\n                \"name\": \"Arcade\",\n                \"url\": \"https://www.igdb.com/platforms/arcade\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 91007,\n                \"human\": \"Jan 01, 1987\"\n            }\n        ],\n        \"slug\": \"dogou-souken\",\n        \"summary\": \"An overhead-view shoot'em up game.\",\n        \"url\": \"https://www.igdb.com/games/dogou-souken\"\n    },\n    {\n        \"id\": 85031,\n        \"category\": 0,\n        \"cover\": {\n            \"id\": 61466,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/yektasaxw6l4ejte7ljb.jpg\"\n        },\n        \"created_at\": 1517392813,\n        \"first_release_date\": 1404345600,\n        \"genres\": [\n            {\n                \"id\": 9,\n                \"name\": \"Puzzle\",\n                \"url\": \"https://www.igdb.com/genres/puzzle\"\n            }\n        ],\n        \"name\": \"City Mysteries\",\n        \"platforms\": [\n            {\n                \"id\": 37,\n                \"name\": \"Nintendo 3DS\",\n                \"url\": \"https://www.igdb.com/platforms/3ds\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 138333,\n                \"human\": \"Jul 03, 2014\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 155025,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/vqubr5dngvnav82gr2qq.jpg\"\n            },\n            {\n                \"id\": 155026,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/hef5xbwivlqhormbijmq.jpg\"\n            },\n            {\n                \"id\": 155027,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/z9cp1rt16dpybiqt5kcn.jpg\"\n            }\n        ],\n        \"slug\": \"city-mysteries\",\n        \"summary\": \"Search buildings, streets, landmarks as you seek and find hidden objects in New York, Paris, Moscow and London!\",\n        \"url\": \"https://www.igdb.com/games/city-mysteries\"\n    },\n    {\n        \"id\": 161757,\n        \"alternative_names\": [\n            {\n                \"id\": 70253,\n                \"name\": \"EARTH DEFENSE FORCE: WORLD BROTHERS - Additional Character: Riho Futaba, Merry Santa Costume\"\n            }\n        ],\n        \"category\": 1,\n        \"created_at\": 1628007985,\n        \"name\": \"Earth Defense Force: World Brothers - Riho Futaba, Merry Santa Costume\",\n        \"screenshots\": [\n            {\n                \"id\": 567675,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scc60r.jpg\"\n            },\n            {\n                \"id\": 567676,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scc60s.jpg\"\n            },\n            {\n                \"id\": 567677,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scc60t.jpg\"\n            },\n            {\n                \"id\": 567678,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scc60u.jpg\"\n            },\n            {\n                \"id\": 567679,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scc60v.jpg\"\n            }\n        ],\n        \"slug\": \"earth-defense-force-world-brothers-riho-futaba-merry-santa-costume\",\n        \"summary\": \"Riho Futaba (voiced by Yuko Goto), a virtual idol who has appeared in numerous video games including the \\\"Dream Club\\\" series, is now joining the EDF. And what's more, she's appearing in Santa Costume. She also comes equipped with an exclusive weapon available only with this content.\",\n        \"url\": \"https://www.igdb.com/games/earth-defense-force-world-brothers-riho-futaba-merry-santa-costume\",\n        \"websites\": [\n            {\n                \"id\": 208872,\n                \"url\": \"https://store.steampowered.com/app/1530273\"\n            }\n        ]\n    },\n    {\n        \"id\": 2802,\n        \"alternative_names\": [\n            {\n                \"id\": 275,\n                \"name\": \"Ben 10 Alien Force: Vilgax Attacks\"\n            }\n        ],\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 2968,\n            \"name\": \"Ben 10\",\n            \"slug\": \"ben-10\",\n            \"url\": \"https://www.igdb.com/collections/ben-10\"\n        },\n        \"cover\": {\n            \"id\": 141924,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co31ic.jpg\"\n        },\n        \"created_at\": 1374959551,\n        \"first_release_date\": 1256601600,\n        \"franchise\": {\n            \"id\": 101,\n            \"name\": \"Ben 10\",\n            \"slug\": \"ben-10\",\n            \"url\": \"https://www.igdb.com/franchises/ben-10\"\n        },\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 4,\n                \"name\": \"Fighting\",\n                \"url\": \"https://www.igdb.com/genres/fighting\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Ben 10 Alien Force: Vilgax Attacks\",\n        \"platforms\": [\n            {\n                \"id\": 5,\n                \"name\": \"Wii\",\n                \"url\": \"https://www.igdb.com/platforms/wii\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"PlayStation 2\",\n                \"url\": \"https://www.igdb.com/platforms/ps2\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Xbox 360\",\n                \"url\": \"https://www.igdb.com/platforms/xbox360\"\n            },\n            {\n                \"id\": 20,\n                \"name\": \"Nintendo DS\",\n                \"url\": \"https://www.igdb.com/platforms/nds\"\n            },\n            {\n                \"id\": 38,\n                \"name\": \"PlayStation Portable\",\n                \"url\": \"https://www.igdb.com/platforms/psp\"\n            }\n        ],\n        \"rating\": 52.0716462534934,\n        \"rating_count\": 6,\n        \"release_dates\": [\n            {\n                \"id\": 5978,\n                \"human\": \"Oct 27, 2009\"\n            },\n            {\n                \"id\": 5979,\n                \"human\": \"Oct 27, 2009\"\n            },\n            {\n                \"id\": 5980,\n                \"human\": \"Oct 27, 2009\"\n            },\n            {\n                \"id\": 5981,\n                \"human\": \"Oct 27, 2009\"\n            },\n            {\n                \"id\": 5982,\n                \"human\": \"Oct 27, 2009\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 677366,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceinq.jpg\"\n            },\n            {\n                \"id\": 677367,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceinr.jpg\"\n            },\n            {\n                \"id\": 677368,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceins.jpg\"\n            },\n            {\n                \"id\": 677369,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceint.jpg\"\n            },\n            {\n                \"id\": 677370,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceinu.jpg\"\n            },\n            {\n                \"id\": 677371,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sceinv.jpg\"\n            }\n        ],\n        \"slug\": \"ben-10-alien-force-vilgax-attacks\",\n        \"summary\": \"BEN 10 ALIEN FORCE: Vilgax Attacks is the latest game in the multi-million unit selling video game series. Players will have the opportunity to experience the vast ALIEN FORCE universe in a brand new action-adventure game, taking Ben into outer space and distant planets for the first time ever in the series to battle against a terrifying threat that only he can stop!\\n\\nBen Tennyson’s greatest enemy of all time, Vilgax, has been busy assembling his own extreme team of Ben’s most fearsome foes in a grand scheme to take over the universe one planet at a time, culminating with the destruction of Ben’s home planet, the Earth!\\nOne planet after another—including some of the home worlds of Ben’s alien forms—has quietly been falling under the control of Vilgax and the villainous underling bosses he’s been stationing on each conquered world to rule ruthlessly in his stead, each more eager than the next to rid the universe of the bane of their collective evil existence, Ben Tennyson, once and for all!\\n\\nNow it’s the Earth’s turn and Ben’s the only person for the job! The fate of the whole universe lies in your hands!\",\n        \"total_rating\": 57.2858231267467,\n        \"total_rating_count\": 9,\n        \"url\": \"https://www.igdb.com/games/ben-10-alien-force-vilgax-attacks\"\n    },\n    {\n        \"id\": 139538,\n        \"category\": 0,\n        \"cover\": {\n            \"id\": 117024,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2iao.jpg\"\n        },\n        \"created_at\": 1602368467,\n        \"first_release_date\": 1525910400,\n        \"game_engines\": [\n            {\n                \"id\": 837,\n                \"name\": \"Bitsy\",\n                \"url\": \"https://www.igdb.com/game_engines/bitsy\"\n            }\n        ],\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 32,\n                \"name\": \"Indie\",\n                \"url\": \"https://www.igdb.com/genres/indie\"\n            }\n        ],\n        \"name\": \"sun machine\",\n        \"platforms\": [\n            {\n                \"id\": 82,\n                \"name\": \"Web browser\",\n                \"url\": \"https://www.igdb.com/platforms/browser\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 213594,\n                \"human\": \"May 10, 2018\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 403247,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc8n5b.jpg\"\n            },\n            {\n                \"id\": 403248,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc8n5c.jpg\"\n            }\n        ],\n        \"slug\": \"sun-machine\",\n        \"summary\": \"a story of dark days, chronic fatigue, optimism, and nostalgia\",\n        \"url\": \"https://www.igdb.com/games/sun-machine\",\n        \"websites\": [\n            {\n                \"id\": 156114,\n                \"url\": \"https://ruin.itch.io/sun-machine\"\n            }\n        ]\n    },\n    {\n        \"id\": 85450,\n        \"category\": 0,\n        \"created_at\": 1517405808,\n        \"name\": \"Transformers Prime: The Game\",\n        \"slug\": \"transformers-prime-the-game\",\n        \"url\": \"https://www.igdb.com/games/transformers-prime-the-game\"\n    },\n    {\n        \"id\": 33284,\n        \"category\": 0,\n        \"created_at\": 1495670400,\n        \"first_release_date\": 1457740800,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 32,\n                \"name\": \"Indie\",\n                \"url\": \"https://www.igdb.com/genres/indie\"\n            }\n        ],\n        \"name\": \"One way to exit\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 77755,\n                \"human\": \"Mar 12, 2016\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 58492,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/swa3xn3bexghpc3ffmcz.jpg\"\n            },\n            {\n                \"id\": 58493,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/zdlnuq0zls2mtfk06pjf.jpg\"\n            },\n            {\n                \"id\": 58494,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/gpkeqan21zroszd2nvsl.jpg\"\n            },\n            {\n                \"id\": 58495,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/behvwwk3nlhfvlhcfcm3.jpg\"\n            },\n            {\n                \"id\": 58496,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ffow63l4ywfkyd0gmsez.jpg\"\n            }\n        ],\n        \"slug\": \"one-way-to-exit\",\n        \"summary\": \"Move forward or backward in search of an exit, but remember, if you started moving you can not stop, and in any case, do not touch the walls, otherwise you have to start all over again.\",\n        \"url\": \"https://www.igdb.com/games/one-way-to-exit\"\n    },\n    {\n        \"id\": 89616,\n        \"category\": 0,\n        \"cover\": {\n            \"id\": 192106,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co448a.jpg\"\n        },\n        \"created_at\": 1519986874,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 9,\n                \"name\": \"Puzzle\",\n                \"url\": \"https://www.igdb.com/genres/puzzle\"\n            },\n            {\n                \"id\": 33,\n                \"name\": \"Arcade\",\n                \"url\": \"https://www.igdb.com/genres/arcade\"\n            }\n        ],\n        \"name\": \"Bubble Whirl Shooter\",\n        \"slug\": \"bubble-whirl-shooter\",\n        \"status\": 8,\n        \"summary\": \"Shoot bubbles and match colors to pop your way up to victory in this bubble shooting adventure, win magic keys to unlock more secret colorful bubble world, it’s time to enjoy the endless bubble shooting fun!\",\n        \"url\": \"https://www.igdb.com/games/bubble-whirl-shooter\"\n    },\n    {\n        \"id\": 104748,\n        \"category\": 0,\n        \"created_at\": 1530489600,\n        \"name\": \"Space station - build your own ISS\",\n        \"slug\": \"space-station-build-your-own-iss\",\n        \"url\": \"https://www.igdb.com/games/space-station-build-your-own-iss\"\n    },\n    {\n        \"id\": 146815,\n        \"category\": 0,\n        \"cover\": {\n            \"id\": 139338,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2zii.jpg\"\n        },\n        \"created_at\": 1620325446,\n        \"first_release_date\": 1230681600,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 9,\n                \"name\": \"Puzzle\",\n                \"url\": \"https://www.igdb.com/genres/puzzle\"\n            }\n        ],\n        \"name\": \"Parking Lot Maze\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 242971,\n                \"human\": \"2008\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 441859,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc9gxv.jpg\"\n            },\n            {\n                \"id\": 441860,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc9gxw.jpg\"\n            },\n            {\n                \"id\": 441861,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc9gxx.jpg\"\n            }\n        ],\n        \"slug\": \"parking-lot-maze\",\n        \"summary\": \"Parking Lot Maze is a puzzle game where as a parking lot manager, you need to free cars from gridlock before the stress level hits the roof.\",\n        \"url\": \"https://www.igdb.com/games/parking-lot-maze\"\n    }\n]"
+				},
+				{
+					"name": "Missing Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/game/list?limit=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "followers",
+									"value": "fsfds",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:20:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"63-BAojB7qX+mLY6LkS424DwNJnIw8\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72820bab5d523223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Validation failed (numeric string is expected)\",\n    \"error\": \"Bad Request\"\n}"
+				},
+				{
+					"name": "Game List Specific Game Based on Name",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/game/list?skip=1&limit=10&name=City",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "followers",
+									"value": "fsfds",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "City"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:21:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"3ed1-8XMr9qmqjwF2rfXkj6FQCXSpsqk\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72820c9e7be33223-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 119963,\n        \"category\": 1,\n        \"cover\": {\n            \"id\": 75411,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co1m6r.jpg\"\n        },\n        \"created_at\": 1561150035,\n        \"first_release_date\": 1514678400,\n        \"follows\": 1,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Strategy\",\n                \"url\": \"https://www.igdb.com/genres/strategy\"\n            }\n        ],\n        \"name\": \"Cities: Skylines - Rock City Radio\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 171607,\n                \"human\": \"2017\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 314270,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhq.jpg\"\n            },\n            {\n                \"id\": 314271,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhr.jpg\"\n            },\n            {\n                \"id\": 314272,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhs.jpg\"\n            }\n        ],\n        \"slug\": \"cities-skylines-rock-city-radio\",\n        \"summary\": \"Do you wish your commute was more head banging, and less banging your head on the steering wheel? Are all of the suburbs you have designed best described as 'rockin''? Cities: Skylines has the tunes you've been waiting for! The new rock radio station takes the mute out of your commute with everything from grunge and classic rock to sleaze rock and metal. Rock Radio is the perfect soundtrack to build your own Detroit Rock City - just try not to trash your hotel rooms too much! \\n \\nWith Rock City you're not only getting new songs, but also DJ Lars. Lars Kurtfield, the aging rocker and host of Rock City Radio written by Steven K Wells, writer of the previous Cities: Skylines radio DJs and commercials.\",\n        \"url\": \"https://www.igdb.com/games/cities-skylines-rock-city-radio\",\n        \"websites\": [\n            {\n                \"id\": 198569,\n                \"url\": \"https://store.steampowered.com/app/614582\"\n            },\n            {\n                \"id\": 198570,\n                \"url\": \"http://www.citiesskylines.com/\"\n            }\n        ]\n    },\n    {\n        \"id\": 186536,\n        \"category\": 1,\n        \"cover\": {\n            \"id\": 201841,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co4bqp.jpg\"\n        },\n        \"created_at\": 1641575958,\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Strategy\",\n                \"url\": \"https://www.igdb.com/genres/strategy\"\n            },\n            {\n                \"id\": 16,\n                \"name\": \"Turn-based strategy (TBS)\",\n                \"url\": \"https://www.igdb.com/genres/turn-based-strategy-tbs\"\n            }\n        ],\n        \"name\": \"City of Gangsters: Atlantic City\",\n        \"screenshots\": [\n            {\n                \"id\": 706830,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scf5e6.jpg\"\n            },\n            {\n                \"id\": 706831,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scf5e7.jpg\"\n            },\n            {\n                \"id\": 706832,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scf5e8.jpg\"\n            },\n            {\n                \"id\": 706833,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scf5e9.jpg\"\n            },\n            {\n                \"id\": 706834,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scf5ea.jpg\"\n            }\n        ],\n        \"slug\": \"city-of-gangsters-atlantic-city\",\n        \"summary\": \"Expand your gambling operations to attract high-rollers to Atlantic City casinos in this new high-stakes expansion!\",\n        \"url\": \"https://www.igdb.com/games/city-of-gangsters-atlantic-city\",\n        \"websites\": [\n            {\n                \"id\": 255970,\n                \"url\": \"https://www.gog.com/game/city_of_gangsters_atlantic_city\"\n            },\n            {\n                \"id\": 262398,\n                \"url\": \"https://store.steampowered.com/app/1811230\"\n            },\n            {\n                \"id\": 262399,\n                \"url\": \"https://www.kasedogames.com/cityofgangsters\"\n            }\n        ]\n    },\n    {\n        \"id\": 65201,\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 4296,\n            \"name\": \"Big City Adventure\",\n            \"slug\": \"big-city-adventure\",\n            \"url\": \"https://www.igdb.com/collections/big-city-adventure\"\n        },\n        \"cover\": {\n            \"id\": 46072,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ajyvnuugajr31ogryhsj.jpg\"\n        },\n        \"created_at\": 1505174400,\n        \"genres\": [\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Big City Adventure: New York City\",\n        \"slug\": \"big-city-adventure-new-york-city\",\n        \"summary\": \"Travel to New York City to find hidden objects.\",\n        \"url\": \"https://www.igdb.com/games/big-city-adventure-new-york-city\"\n    },\n    {\n        \"id\": 75545,\n        \"alternative_names\": [\n            {\n                \"id\": 39943,\n                \"name\": \"Batman: Arkham City Batsuit DLC\"\n            },\n            {\n                \"id\": 39944,\n                \"name\": \"1970s Batman Suit DLC\"\n            },\n            {\n                \"id\": 39945,\n                \"name\": \"Year One Batman Suit DLC\"\n            },\n            {\n                \"id\": 39946,\n                \"name\": \"The Dark Knight Returns Suit DLC\"\n            },\n            {\n                \"id\": 39947,\n                \"name\": \"Earth One Batman Suit DLC\"\n            },\n            {\n                \"id\": 39948,\n                \"name\": \"Batman Beyond Suit DLC\"\n            },\n            {\n                \"id\": 39949,\n                \"name\": \"Batman: The Animated Series Suit DLC\"\n            },\n            {\n                \"id\": 39950,\n                \"name\": \"Sinestro Corps Batman Suit DLC\"\n            }\n        ],\n        \"category\": 1,\n        \"collection\": {\n            \"id\": 68,\n            \"name\": \"Batman: Arkham\",\n            \"slug\": \"batman-arkham\",\n            \"url\": \"https://www.igdb.com/collections/batman-arkham\"\n        },\n        \"cover\": {\n            \"id\": 44259,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/onujdb7krwmvflsgiicg.jpg\"\n        },\n        \"created_at\": 1510061866,\n        \"first_release_date\": 1323129600,\n        \"game_engines\": [\n            {\n                \"id\": 6,\n                \"name\": \"Unreal Engine\",\n                \"url\": \"https://www.igdb.com/game_engines/unreal-engine\"\n            }\n        ],\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 25,\n                \"name\": \"Hack and slash/Beat 'em up\",\n                \"url\": \"https://www.igdb.com/genres/hack-and-slash-beat-em-up\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Batman: Arkham City - Arkham City Skins Pack\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"PlayStation 3\",\n                \"url\": \"https://www.igdb.com/platforms/ps3\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Xbox 360\",\n                \"url\": \"https://www.igdb.com/platforms/xbox360\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 177260,\n                \"human\": \"Dec 21, 2011\"\n            },\n            {\n                \"id\": 208732,\n                \"human\": \"Dec 06, 2011\"\n            },\n            {\n                \"id\": 208733,\n                \"human\": \"Dec 06, 2011\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 397799,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc8ixz.jpg\"\n            },\n            {\n                \"id\": 397800,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc8iy0.jpg\"\n            },\n            {\n                \"id\": 397801,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc8iy1.jpg\"\n            }\n        ],\n        \"slug\": \"batman-arkham-city-arkham-city-skins-pack\",\n        \"summary\": \"The Arkham City Skins Pack contains seven bonus Batman skins: \\n - 1970s Batman \\n- Year One Batman \\n- The Dark Knight Returns \\n- Earth One Batman \\n- Batman Beyond \\n- Animated Batman \\n- Sinestro Corps Batman \\n \\nThe seven Batman skins can be used in storyline mode upon completion of main story and all challenge maps.\",\n        \"url\": \"https://www.igdb.com/games/batman-arkham-city-arkham-city-skins-pack\",\n        \"videos\": [\n            {\n                \"id\": 40031,\n                \"name\": \"Trailer\",\n                \"video_id\": \"DXbY7S_f4S8\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 61427,\n                \"url\": \"https://store.steampowered.com/app/200860/Batman_Arkham_City_Arkham_City_Skins_Pack\"\n            },\n            {\n                \"id\": 151238,\n                \"url\": \"https://rocksteadyltd.com/#arkham-city\"\n            },\n            {\n                \"id\": 151239,\n                \"url\": \"https://www.twitch.tv/rocksteady\"\n            },\n            {\n                \"id\": 151240,\n                \"url\": \"https://www.youtube.com/user/BatmanArkhamCity\"\n            },\n            {\n                \"id\": 151241,\n                \"url\": \"https://www.facebook.com/BatmanArkhamUK\"\n            },\n            {\n                \"id\": 151242,\n                \"url\": \"https://twitter.com/batmanarkham\"\n            },\n            {\n                \"id\": 151243,\n                \"url\": \"https://www.instagram.com/batmanarkham\"\n            },\n            {\n                \"id\": 151244,\n                \"url\": \"https://www.reddit.com/r/BatmanArkham\"\n            },\n            {\n                \"id\": 151245,\n                \"url\": \"https://arkhamcity.fandom.com/wiki/Downloadable_Content\"\n            },\n            {\n                \"id\": 151246,\n                \"url\": \"https://en.wikipedia.org/wiki/Batman:_Arkham_City\"\n            }\n        ]\n    },\n    {\n        \"id\": 159120,\n        \"category\": 7,\n        \"cover\": {\n            \"id\": 218504,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co4olk.jpg\"\n        },\n        \"created_at\": 1626977841,\n        \"first_release_date\": 1653436800,\n        \"game_modes\": [\n            {\n                \"id\": 2,\n                \"name\": \"Multiplayer\",\n                \"slug\": \"multiplayer\",\n                \"url\": \"https://www.igdb.com/game_modes/multiplayer\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 4,\n                \"name\": \"Fighting\",\n                \"url\": \"https://www.igdb.com/genres/fighting\"\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Shooter\",\n                \"url\": \"https://www.igdb.com/genres/shooter\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Sport\",\n                \"url\": \"https://www.igdb.com/genres/sport\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            },\n            {\n                \"id\": 32,\n                \"name\": \"Indie\",\n                \"url\": \"https://www.igdb.com/genres/indie\"\n            }\n        ],\n        \"name\": \"Knockout City: Season 1 - Welcome to Knockout City\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 48,\n                \"name\": \"PlayStation 4\",\n                \"url\": \"https://www.igdb.com/platforms/ps4--1\"\n            },\n            {\n                \"id\": 49,\n                \"name\": \"Xbox One\",\n                \"url\": \"https://www.igdb.com/platforms/xboxone\"\n            },\n            {\n                \"id\": 130,\n                \"name\": \"Nintendo Switch\",\n                \"url\": \"https://www.igdb.com/platforms/switch\"\n            },\n            {\n                \"id\": 167,\n                \"name\": \"PlayStation 5\",\n                \"url\": \"https://www.igdb.com/platforms/ps5\"\n            },\n            {\n                \"id\": 169,\n                \"name\": \"Xbox Series X|S\",\n                \"url\": \"https://www.igdb.com/platforms/series-x\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 355161,\n                \"human\": \"May 25, 2022\"\n            },\n            {\n                \"id\": 355162,\n                \"human\": \"May 25, 2022\"\n            },\n            {\n                \"id\": 355163,\n                \"human\": \"May 25, 2022\"\n            },\n            {\n                \"id\": 355164,\n                \"human\": \"May 25, 2022\"\n            },\n            {\n                \"id\": 355165,\n                \"human\": \"May 25, 2022\"\n            },\n            {\n                \"id\": 355166,\n                \"human\": \"May 25, 2022\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 779558,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scgpie.jpg\"\n            },\n            {\n                \"id\": 779559,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scgpif.jpg\"\n            },\n            {\n                \"id\": 779560,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scgpig.jpg\"\n            }\n        ],\n        \"slug\": \"knockout-city-season-1-welcome-to-knockout-city\",\n        \"summary\": \"Now grab a ball, round up a crew, hit the streets, and make a name for yourself!\",\n        \"url\": \"https://www.igdb.com/games/knockout-city-season-1-welcome-to-knockout-city\",\n        \"videos\": [\n            {\n                \"id\": 52498,\n                \"name\": \"Trailer\",\n                \"video_id\": \"CWaAuPqtKsA\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 203374,\n                \"url\": \"https://www.ea.com/games/knockout-city/season-1\"\n            },\n            {\n                \"id\": 277900,\n                \"url\": \"https://twitch.tv/knockoutcity\"\n            },\n            {\n                \"id\": 277901,\n                \"url\": \"https://www.youtube.com/channel/UCUDBxQo7wFn_MStI_M7Dtfg\"\n            },\n            {\n                \"id\": 277902,\n                \"url\": \"https://twitter.com/knockoutcity\"\n            },\n            {\n                \"id\": 277903,\n                \"url\": \"https://discord.gg/knockoutcity\"\n            },\n            {\n                \"id\": 277904,\n                \"url\": \"https://en.wikipedia.org/wiki/Knockout_City\"\n            }\n        ]\n    },\n    {\n        \"id\": 151417,\n        \"category\": 1,\n        \"created_at\": 1622723889,\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            }\n        ],\n        \"name\": \"Cities in Motion: US Cities\",\n        \"screenshots\": [\n            {\n                \"id\": 499570,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scapgy.jpg\"\n            },\n            {\n                \"id\": 499571,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scapgz.jpg\"\n            },\n            {\n                \"id\": 499572,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph0.jpg\"\n            },\n            {\n                \"id\": 499573,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph1.jpg\"\n            },\n            {\n                \"id\": 499574,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph2.jpg\"\n            },\n            {\n                \"id\": 499575,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph3.jpg\"\n            },\n            {\n                \"id\": 499576,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph4.jpg\"\n            },\n            {\n                \"id\": 499577,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scaph5.jpg\"\n            }\n        ],\n        \"slug\": \"cities-in-motion-us-cities\",\n        \"summary\": \"Cities in Motion: US Cities is a new addition to the city-based mass transportation simulation game Cities in Motion. This expansion brings you two cities on a new continent with new challenges in both sandbox and campaign modes. New vehicle types and large populations set in beautiful metropolises will keep your creativity flowing! Try the trolley buses in New York or build a cable car network in sunny San Francisco, but remember to keep your passengers happy!\",\n        \"url\": \"https://www.igdb.com/games/cities-in-motion-us-cities\",\n        \"websites\": [\n            {\n                \"id\": 189588,\n                \"url\": \"https://store.steampowered.com/app/73187\"\n            },\n            {\n                \"id\": 189589,\n                \"url\": \"http://www.citiesinmotion.com\"\n            }\n        ]\n    },\n    {\n        \"id\": 119961,\n        \"category\": 2,\n        \"cover\": {\n            \"id\": 91879,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co1yw7.jpg\"\n        },\n        \"created_at\": 1561149498,\n        \"first_release_date\": 1507507200,\n        \"follows\": 1,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Strategy\",\n                \"url\": \"https://www.igdb.com/genres/strategy\"\n            }\n        ],\n        \"name\": \"Cities: Skylines - Green Cities\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 188678,\n                \"human\": \"Oct 09, 2017\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 314258,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhe.jpg\"\n            },\n            {\n                \"id\": 314259,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhf.jpg\"\n            },\n            {\n                \"id\": 314260,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qhg.jpg\"\n            },\n            {\n                \"id\": 361456,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc7qwg.jpg\"\n            },\n            {\n                \"id\": 361457,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc7qwh.jpg\"\n            }\n        ],\n        \"slug\": \"cities-skylines-green-cities\",\n        \"summary\": \"Cities: Skylines - Green Cities is a new expansion for the city-builder from Colossal Order, adding new ways for players to build earth-friendly towns. The expansion adds 350 new assets to the core game, adding a massive selection of new visual options, complete with eco-friendly buildings, organic shops, electric vehicles, and new services designed to make pollution a quaint notion of the past. Players can create more diversified cities, or go completely green as the urban population grows. New in-game services and buildings arrive alongside revisions to noise and environmental pollution, making the skies safer for Chirper at last.\",\n        \"url\": \"https://www.igdb.com/games/cities-skylines-green-cities\",\n        \"videos\": [\n            {\n                \"id\": 33804,\n                \"name\": \"Trailer\",\n                \"video_id\": \"MAAkOh60QLw\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 133377,\n                \"url\": \"http://www.citiesskylines.com/\"\n            },\n            {\n                \"id\": 133378,\n                \"url\": \"https://store.steampowered.com/app/614580/Cities_Skylines__Green_Cities/\"\n            }\n        ]\n    },\n    {\n        \"id\": 52728,\n        \"category\": 1,\n        \"created_at\": 1501430899,\n        \"first_release_date\": 1315958400,\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            }\n        ],\n        \"name\": \"Cities in Motion: German Cities\",\n        \"platforms\": [\n            {\n                \"id\": 3,\n                \"name\": \"Linux\",\n                \"url\": \"https://www.igdb.com/platforms/linux\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Mac\",\n                \"url\": \"https://www.igdb.com/platforms/mac\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 287914,\n                \"human\": \"Sep 14, 2011\"\n            },\n            {\n                \"id\": 287915,\n                \"human\": \"Sep 14, 2011\"\n            },\n            {\n                \"id\": 287916,\n                \"human\": \"Sep 14, 2011\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 483732,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad90.jpg\"\n            },\n            {\n                \"id\": 483737,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad95.jpg\"\n            },\n            {\n                \"id\": 483740,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad98.jpg\"\n            },\n            {\n                \"id\": 483743,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad9b.jpg\"\n            },\n            {\n                \"id\": 483745,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad9d.jpg\"\n            },\n            {\n                \"id\": 483747,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad9f.jpg\"\n            },\n            {\n                \"id\": 483748,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/scad9g.jpg\"\n            }\n        ],\n        \"slug\": \"cities-in-motion-german-cities\",\n        \"summary\": \"Cities in Motion: German Cities is a new addition to the city-based mass transportation simulation game Cities in Motion. German Cities brings you back to the early days of transportation history. Engage in the campaign with four different scenario set in ten decades starting from the 1920's. German Cities adds 2 new cities, 4 different campaign scenarios, and new German landmarks to the game.\",\n        \"url\": \"https://www.igdb.com/games/cities-in-motion-german-cities\",\n        \"websites\": [\n            {\n                \"id\": 192022,\n                \"url\": \"https://store.steampowered.com/app/73185\"\n            },\n            {\n                \"id\": 192023,\n                \"url\": \"http://www.citiesinmotion.com\"\n            }\n        ]\n    },\n    {\n        \"id\": 119955,\n        \"category\": 1,\n        \"cover\": {\n            \"id\": 75402,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co1m6i.jpg\"\n        },\n        \"created_at\": 1561148243,\n        \"first_release_date\": 1558396800,\n        \"follows\": 1,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Strategy\",\n                \"url\": \"https://www.igdb.com/genres/strategy\"\n            }\n        ],\n        \"name\": \"Cities: Skylines - Content Creator Pack: University City\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            }\n        ],\n        \"release_dates\": [\n            {\n                \"id\": 171597,\n                \"human\": \"May 21, 2019\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 314237,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qgt.jpg\"\n            },\n            {\n                \"id\": 314238,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qgu.jpg\"\n            },\n            {\n                \"id\": 314239,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/sc6qgv.jpg\"\n            }\n        ],\n        \"slug\": \"cities-skylines-content-creator-pack-university-city\",\n        \"summary\": \"Cities: Skylines - Content Creator Pack: University City is a DLC for the city simulation game Cities: Skylines. Give your city that real \\\"university town\\\" look and feel with a selection of new building spawns. University City adds 36 low-density residential buildings, 32 low-density commercial buildings, and 15 props including commercial signs and logos to reflect the student residents in your neighborhood!\",\n        \"url\": \"https://www.igdb.com/games/cities-skylines-content-creator-pack-university-city\",\n        \"websites\": [\n            {\n                \"id\": 206586,\n                \"url\": \"https://store.steampowered.com/app/1059820\"\n            }\n        ]\n    }\n]"
+				},
+				{
+					"name": "Game List : Invalid Query Input",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/game/list?skip=1&limit=10&followers=fsfds&rating=10&totalRating=0&name=City",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "followers",
+									"value": "fsfds"
+								},
+								{
+									"key": "rating",
+									"value": "10"
+								},
+								{
+									"key": "totalRating",
+									"value": "0"
+								},
+								{
+									"key": "name",
+									"value": "City"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:23:40 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "53"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"35-gA9P2z5Sw44VyLMCuTPHEkPkRrI\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "72820febfa4d3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errorCode\": \"BAD_REQUEST\",\n    \"message\": \"Invalid Input\"\n}"
+				},
+				{
+					"name": "Game List filter with all query input",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/game/list?skip=1&limit=10&followers=40&rating=10&totalRating=0&name=City",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"list"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "followers",
+									"value": "40"
+								},
+								{
+									"key": "rating",
+									"value": "10"
+								},
+								{
+									"key": "totalRating",
+									"value": "0"
+								},
+								{
+									"key": "name",
+									"value": "City"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:24:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"6223-KXC0z03naW1AOFvqmJ03l+s2204\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728210c249b53223-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 501,\n        \"alternative_names\": [\n            {\n                \"id\": 2706,\n                \"name\": \"Batman:AC\"\n            },\n            {\n                \"id\": 39937,\n                \"name\": \"Batman: Arkham Asylum 2\"\n            },\n            {\n                \"id\": 52606,\n                \"name\": \"Arkham City\"\n            }\n        ],\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 68,\n            \"name\": \"Batman: Arkham\",\n            \"slug\": \"batman-arkham\",\n            \"url\": \"https://www.igdb.com/collections/batman-arkham\"\n        },\n        \"cover\": {\n            \"id\": 87713,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co1voh.jpg\"\n        },\n        \"created_at\": 1301479055,\n        \"first_release_date\": 1318896000,\n        \"follows\": 614,\n        \"franchise\": {\n            \"id\": 5,\n            \"name\": \"Batman\",\n            \"slug\": \"batman\",\n            \"url\": \"https://www.igdb.com/franchises/batman\"\n        },\n        \"game_engines\": [\n            {\n                \"id\": 6,\n                \"name\": \"Unreal Engine\",\n                \"url\": \"https://www.igdb.com/game_engines/unreal-engine\"\n            }\n        ],\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 25,\n                \"name\": \"Hack and slash/Beat 'em up\",\n                \"url\": \"https://www.igdb.com/genres/hack-and-slash-beat-em-up\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Batman: Arkham City\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"PlayStation 3\",\n                \"url\": \"https://www.igdb.com/platforms/ps3\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Xbox 360\",\n                \"url\": \"https://www.igdb.com/platforms/xbox360\"\n            },\n            {\n                \"id\": 113,\n                \"name\": \"OnLive Game System\",\n                \"url\": \"https://www.igdb.com/platforms/onlive-game-system\"\n            }\n        ],\n        \"rating\": 87.2621683139129,\n        \"rating_count\": 1691,\n        \"release_dates\": [\n            {\n                \"id\": 21720,\n                \"human\": \"Nov 22, 2011\"\n            },\n            {\n                \"id\": 21721,\n                \"human\": \"Oct 18, 2011\"\n            },\n            {\n                \"id\": 21723,\n                \"human\": \"Oct 19, 2011\"\n            },\n            {\n                \"id\": 21724,\n                \"human\": \"Oct 19, 2011\"\n            },\n            {\n                \"id\": 21726,\n                \"human\": \"Oct 21, 2011\"\n            },\n            {\n                \"id\": 21727,\n                \"human\": \"Nov 25, 2011\"\n            },\n            {\n                \"id\": 21728,\n                \"human\": \"Nov 23, 2011\"\n            },\n            {\n                \"id\": 21730,\n                \"human\": \"Nov 23, 2011\"\n            },\n            {\n                \"id\": 21731,\n                \"human\": \"Oct 18, 2011\"\n            },\n            {\n                \"id\": 101784,\n                \"human\": \"Oct 18, 2011\"\n            },\n            {\n                \"id\": 101785,\n                \"human\": \"Oct 21, 2011\"\n            },\n            {\n                \"id\": 101786,\n                \"human\": \"Nov 23, 2011\"\n            },\n            {\n                \"id\": 208694,\n                \"human\": \"Nov 22, 2011\"\n            },\n            {\n                \"id\": 208695,\n                \"human\": \"Nov 23, 2011\"\n            },\n            {\n                \"id\": 208696,\n                \"human\": \"Nov 25, 2011\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 350,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/optmyqz2utbniy4abipu.jpg\"\n            },\n            {\n                \"id\": 351,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/zogoamnedpsulpqblwfn.jpg\"\n            },\n            {\n                \"id\": 352,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ephvdh5mjs2jdadxzw4u.jpg\"\n            },\n            {\n                \"id\": 354,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ygltnojhp2e8dvo8yapm.jpg\"\n            },\n            {\n                \"id\": 40724,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/mpgh7k42h4gpg9saizpr.jpg\"\n            }\n        ],\n        \"slug\": \"batman-arkham-city\",\n        \"storyline\": \"At a press conference held by Bruce Wayne to declare his opposition to Arkham City, TYGER mercenaries arrest and imprison him in Arkham City. Hugo Strange discloses his knowledge of Wayne's dual identity as Batman before releasing him into the prison's criminal populace. While Strange prepares to commence \\\"Protocol 10\\\", Wayne obtains his equipment via airdrop from Alfred Pennyworth, allowing him to become Batman. He first saves Catwoman from being executed by Two-Face, who hopes to gain respect by murdering her. After Joker attempts to assassinate Catwoman, Batman tracks him to his hideout in the Sionis Steelmill, believing Joker may know the truth behind Protocol 10.\\n\\nThere, Batman learns that the unstable properties of the Titan formula are mutating in Joker's blood, gradually killing him. Joker captures Batman and performs a blood transfusion on him, infecting him with the same fatal disease. Joker also reveals that Gotham hospitals have been poisoned with his infected blood. Desperate to save himself and innocent citizens, Batman seeks out Mr. Freeze, who had been developing a cure but has since been kidnapped by the Penguin.\\n\\nTracking Penguin to the Cyrus Pinkney National History Institute, Batman defeats his forces, his imprisoned monster Solomon Grundy, and ultimately the Penguin himself, before liberating Mr. Freeze. Freeze tells Batman that he has already developed the cure, but its instability renders it useless. Batman deduces that the restorative properties of Ra's al Ghul's blood can complete the cure. Batman tracks one of Ra's al Ghul's assassins to his underground lair, leading Batman into a confrontation with Ra's and his daughter Talia, Batman's former lover. With Ra's al Ghul's blood, Freeze is able to develop an antidote, but it is stolen by Harley Quinn before Batman can use it.\\n\\nWhen he returns to the Joker, Batman finds him restored to health. While the two fight, Strange activates Protocol 10, which is revealed to be a scheme to wipe out the entire population of Arkham City and destroy the criminal element of Gotham. The TYGER troops begin executing inmates as Strange launches missile strikes on Arkham's denizens from his base in Wonder Tower. A missile hits the steelmill, burying Batman under rubble. Before Joker can take advantage of the situation, Talia arrives and offers him immortality in exchange for sparing Batman's life. After escaping with the help of Catwoman, Batman is convinced by Alfred to end Protocol 10 before pursuing Talia and Joker.\\n\\nBatman infiltrates Wonder Tower and disables Protocol 10. Ra's al Ghul is revealed to be the true mastermind behind Arkham City and mortally wounds Strange for failing to defeat Batman. With his dying breath, Strange activates \\\"Protocol 11\\\", the self-destruction of Wonder Tower. Batman and Ra's escape, but Ra's commits suicide rather than risk capture. Joker contacts Batman, threatening to kill Talia unless Batman meets him at the Monarch Theater. Once Batman arrives, Joker demands the cure but is stabbed and apparently killed by Talia while distracted. Talia admits to stealing the cure from Quinn, when she is killed by a second Joker, still stricken with the disease. The healthy Joker that Talia stabbed then reanimates into the shapeshifting Clayface, who is revealed to have been masquerading as a healthy Joker all along at the ailing villain's request.\\n\\nBatman incapacitates Clayface, but Joker blows up the theater floor, sending Batman plummeting into Ra's' lair below. Batman destroys Ra's' rejuvenating Lazarus Pit before the Joker can use it, and drinks a portion of the antidote. Batman debates curing his foe but is attacked by Joker before he can act, causing the antidote vial to inadvertently smash. Batman admits that in spite of everything Joker had done, he would have saved him. After Joker finally succumbs to his illness and dies, Batman carries his body out of Arkham City. As Commissioner Gordon asks what happened, Batman places Joker's body on the hood of a police car and leaves in silence.\",\n        \"summary\": \"After the events of Batman: Arkham Asylum (2009), a section of the city of Gotham has been turned into a prison, designed to keep the scum of the city away from the people. Bruce Wayne protests this prison but is shortly kidnapped by the despicable Hugo Strange, thus having to face the city's most powerful villains as the Batman while trying to uncover Strange's plans.\",\n        \"total_rating\": 89.23108415695646,\n        \"total_rating_count\": 1704,\n        \"url\": \"https://www.igdb.com/games/batman-arkham-city\",\n        \"videos\": [\n            {\n                \"id\": 183,\n                \"name\": \"Trailer\",\n                \"video_id\": \"FCTdm8Nb7Ps\"\n            },\n            {\n                \"id\": 3345,\n                \"name\": \"Trailer\",\n                \"video_id\": \"cczQjKGXwIQ\"\n            },\n            {\n                \"id\": 67387,\n                \"name\": \"Gameplay Video\",\n                \"video_id\": \"BE-KsKd4RoE\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 19549,\n                \"url\": \"http://batman.wikia.com/wiki/Batman:_Arkham_City\"\n            },\n            {\n                \"id\": 19550,\n                \"url\": \"https://en.wikipedia.org/wiki/Batman:_Arkham_City\"\n            },\n            {\n                \"id\": 151182,\n                \"url\": \"https://rocksteadyltd.com/#arkham-city\"\n            },\n            {\n                \"id\": 151183,\n                \"url\": \"https://www.twitch.tv/rocksteady\"\n            },\n            {\n                \"id\": 151184,\n                \"url\": \"https://www.youtube.com/user/BatmanArkhamCity\"\n            },\n            {\n                \"id\": 151185,\n                \"url\": \"https://www.facebook.com/BatmanArkhamUK\"\n            },\n            {\n                \"id\": 151186,\n                \"url\": \"https://twitter.com/batmanarkham\"\n            },\n            {\n                \"id\": 151187,\n                \"url\": \"https://www.instagram.com/batmanarkham\"\n            },\n            {\n                \"id\": 151188,\n                \"url\": \"https://www.reddit.com/r/BatmanArkham\"\n            },\n            {\n                \"id\": 162384,\n                \"url\": \"https://store.steampowered.com/app/57400\"\n            }\n        ]\n    },\n    {\n        \"id\": 733,\n        \"alternative_names\": [\n            {\n                \"id\": 21962,\n                \"name\": \"GTA VC\"\n            },\n            {\n                \"id\": 52701,\n                \"name\": \"GTA Vice City\"\n            },\n            {\n                \"id\": 52702,\n                \"name\": \"Vice City\"\n            }\n        ],\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 847,\n            \"name\": \"Grand Theft Auto\",\n            \"slug\": \"grand-theft-auto\",\n            \"url\": \"https://www.igdb.com/collections/grand-theft-auto\"\n        },\n        \"cover\": {\n            \"id\": 120935,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2lbb.jpg\"\n        },\n        \"created_at\": 1317748970,\n        \"first_release_date\": 1035676800,\n        \"follows\": 774,\n        \"game_engines\": [\n            {\n                \"id\": 41,\n                \"name\": \"RenderWare\",\n                \"url\": \"https://www.igdb.com/game_engines/renderware\"\n            }\n        ],\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 5,\n                \"name\": \"Shooter\",\n                \"url\": \"https://www.igdb.com/genres/shooter\"\n            },\n            {\n                \"id\": 10,\n                \"name\": \"Racing\",\n                \"url\": \"https://www.igdb.com/genres/racing\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            },\n            {\n                \"id\": 33,\n                \"name\": \"Arcade\",\n                \"url\": \"https://www.igdb.com/genres/arcade\"\n            }\n        ],\n        \"hypes\": 1,\n        \"name\": \"Grand Theft Auto: Vice City\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 8,\n                \"name\": \"PlayStation 2\",\n                \"url\": \"https://www.igdb.com/platforms/ps2\"\n            },\n            {\n                \"id\": 11,\n                \"name\": \"Xbox\",\n                \"url\": \"https://www.igdb.com/platforms/xbox\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Mac\",\n                \"url\": \"https://www.igdb.com/platforms/mac\"\n            },\n            {\n                \"id\": 34,\n                \"name\": \"Android\",\n                \"url\": \"https://www.igdb.com/platforms/android\"\n            },\n            {\n                \"id\": 39,\n                \"name\": \"iOS\",\n                \"url\": \"https://www.igdb.com/platforms/ios\"\n            },\n            {\n                \"id\": 48,\n                \"name\": \"PlayStation 4\",\n                \"url\": \"https://www.igdb.com/platforms/ps4--1\"\n            }\n        ],\n        \"rating\": 87.68193453687371,\n        \"rating_count\": 1890,\n        \"release_dates\": [\n            {\n                \"id\": 2204,\n                \"human\": \"Oct 31, 2003\"\n            },\n            {\n                \"id\": 3319,\n                \"human\": \"May 01, 2003\"\n            },\n            {\n                \"id\": 6715,\n                \"human\": \"Aug 25, 2011\"\n            },\n            {\n                \"id\": 48659,\n                \"human\": \"Dec 05, 2015\"\n            },\n            {\n                \"id\": 124933,\n                \"human\": \"Oct 27, 2002\"\n            },\n            {\n                \"id\": 147097,\n                \"human\": \"Aug 25, 2011\"\n            },\n            {\n                \"id\": 149893,\n                \"human\": \"Dec 06, 2012\"\n            },\n            {\n                \"id\": 363491,\n                \"human\": \"Dec 06, 2012\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 8541,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/yl0nzc7itjnc6oyawagp.jpg\"\n            },\n            {\n                \"id\": 23406,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/cqiwbbgjhersmqru7339.jpg\"\n            },\n            {\n                \"id\": 23407,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/tfcu496z7nwgnkbqfvrv.jpg\"\n            },\n            {\n                \"id\": 23408,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ilxqfgiaxygal1srqnfz.jpg\"\n            },\n            {\n                \"id\": 23409,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/txxrbak4yycdogvvjwtb.jpg\"\n            }\n        ],\n        \"slug\": \"grand-theft-auto-vice-city\",\n        \"storyline\": \"Welcome to Vice City. Welcome to the 1980s.\\n\\nHaving just made it back onto the streets of Liberty City after a long stretch in maximum security, Tommy Vercetti is sent to Vice City by his old boss, Sonny Forelli. They were understandably nervous about his re-appearance in Liberty City, so a trip down south seemed like a good idea. But all does not go smoothly upon his arrival in the glamorous, hedonistic metropolis of Vice City. He's set up and is left with no money and no merchandise. Sonny wants his money back, but the biker gangs, Cuban gangsters, and corrupt politicians stand in his way. Most of Vice City seems to want Tommy dead. His only answer is to fight back and take over the city himself.\",\n        \"summary\": \"In the year 1986, Tommy Vercetti is heavily indebted to his mafia superiors after a drug deal gone awry, but his dreams of taking over Vice City (based on Miami) push him down a different path. Featuring a wide variety of vehicles and weapons, radio stations playing hit songs from the era and an intense atmosphere, GTA: Vice City is an open-world sandbox satire of '80's Miami.\",\n        \"total_rating\": 90.84096726843686,\n        \"total_rating_count\": 1896,\n        \"url\": \"https://www.igdb.com/games/grand-theft-auto-vice-city\",\n        \"videos\": [\n            {\n                \"id\": 3544,\n                \"name\": \"Trailer\",\n                \"video_id\": \"MpmDawqOfqs\"\n            },\n            {\n                \"id\": 3546,\n                \"name\": \"Gameplay video\",\n                \"video_id\": \"Iq2Jzksu8BA\"\n            },\n            {\n                \"id\": 18992,\n                \"name\": \"Trailer\",\n                \"video_id\": \"Q7FZf5v4Y4U\"\n            },\n            {\n                \"id\": 19717,\n                \"name\": \"Trailer\",\n                \"video_id\": \"Qsx6ZMfcPUs\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 19244,\n                \"url\": \"http://gta.wikia.com/Grand_Theft_Auto:_Vice_City\"\n            },\n            {\n                \"id\": 19245,\n                \"url\": \"https://itunes.apple.com/us/app/grand-theft-auto-vice-city/id578448682?mt=8\"\n            },\n            {\n                \"id\": 19246,\n                \"url\": \"https://play.google.com/store/apps/details?id=com.rockstargames.gtavc&hl=en\"\n            },\n            {\n                \"id\": 42934,\n                \"url\": \"https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City\"\n            },\n            {\n                \"id\": 42943,\n                \"url\": \"https://www.facebook.com/GrandTheftAutoViceCity\"\n            },\n            {\n                \"id\": 67035,\n                \"url\": \"https://store.steampowered.com/app/12110\"\n            },\n            {\n                \"id\": 72600,\n                \"url\": \"http://www.rockstargames.com/grandtheftautovicecity\"\n            },\n            {\n                \"id\": 76329,\n                \"url\": \"https://itunes.apple.com/us/app/grand-theft-auto-vice-city/id578448682?mt=8&uo=4\"\n            }\n        ]\n    },\n    {\n        \"id\": 9066,\n        \"category\": 0,\n        \"cover\": {\n            \"id\": 76359,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co1mx3.jpg\"\n        },\n        \"created_at\": 1423830650,\n        \"first_release_date\": 1425945600,\n        \"follows\": 246,\n        \"game_engines\": [\n            {\n                \"id\": 13,\n                \"name\": \"Unity\",\n                \"url\": \"https://www.igdb.com/game_engines/unity\"\n            }\n        ],\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 13,\n                \"name\": \"Simulator\",\n                \"url\": \"https://www.igdb.com/genres/simulator\"\n            },\n            {\n                \"id\": 15,\n                \"name\": \"Strategy\",\n                \"url\": \"https://www.igdb.com/genres/strategy\"\n            }\n        ],\n        \"hypes\": 2,\n        \"name\": \"Cities: Skylines\",\n        \"platforms\": [\n            {\n                \"id\": 3,\n                \"name\": \"Linux\",\n                \"url\": \"https://www.igdb.com/platforms/linux\"\n            },\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 14,\n                \"name\": \"Mac\",\n                \"url\": \"https://www.igdb.com/platforms/mac\"\n            },\n            {\n                \"id\": 48,\n                \"name\": \"PlayStation 4\",\n                \"url\": \"https://www.igdb.com/platforms/ps4--1\"\n            },\n            {\n                \"id\": 49,\n                \"name\": \"Xbox One\",\n                \"url\": \"https://www.igdb.com/platforms/xboxone\"\n            },\n            {\n                \"id\": 170,\n                \"name\": \"Google Stadia\",\n                \"url\": \"https://www.igdb.com/platforms/stadia\"\n            }\n        ],\n        \"rating\": 81.3389367156069,\n        \"rating_count\": 421,\n        \"release_dates\": [\n            {\n                \"id\": 27933,\n                \"human\": \"Mar 10, 2015\"\n            },\n            {\n                \"id\": 27934,\n                \"human\": \"Mar 10, 2015\"\n            },\n            {\n                \"id\": 27935,\n                \"human\": \"Mar 10, 2015\"\n            },\n            {\n                \"id\": 71960,\n                \"human\": \"Apr 21, 2017\"\n            },\n            {\n                \"id\": 109089,\n                \"human\": \"Aug 15, 2017\"\n            },\n            {\n                \"id\": 121151,\n                \"human\": \"Mar 10, 2015\"\n            },\n            {\n                \"id\": 347799,\n                \"human\": \"2022\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 8691,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/zlkrgd6re31fzznlqetg.jpg\"\n            },\n            {\n                \"id\": 8692,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/p6hvd2hk2j3yaqya2b8b.jpg\"\n            },\n            {\n                \"id\": 8693,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/t6s63fj0zgoxl2qjpquw.jpg\"\n            },\n            {\n                \"id\": 8694,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/au4c05q7ltgciciwprse.jpg\"\n            },\n            {\n                \"id\": 8695,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/dwhwyahob4d4zsnjztmo.jpg\"\n            }\n        ],\n        \"slug\": \"cities-skylines\",\n        \"summary\": \"Cities: Skylines is a modern take on the classic city simulation genre. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience. From the makers of the Cities in Motion franchise, the game boasts a fully realized transport system. It also includes the ability to mod the game to suit your play style as a fine counter balance to the layered and challenging simulation. You're only limited by your imagination, so take control and reach for the sky!\",\n        \"total_rating\": 78.78485297318805,\n        \"total_rating_count\": 437,\n        \"url\": \"https://www.igdb.com/games/cities-skylines\",\n        \"videos\": [\n            {\n                \"id\": 3658,\n                \"name\": \"Launch trailer\",\n                \"video_id\": \"cVhYSyVbGBs\"\n            },\n            {\n                \"id\": 12146,\n                \"name\": \"Trailer\",\n                \"video_id\": \"A_zDorj9nZI\"\n            },\n            {\n                \"id\": 15358,\n                \"name\": \"PlayStation 4 Launch Trailer\",\n                \"video_id\": \"i0-ClwwWQeM\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 12555,\n                \"url\": \"https://en.wikipedia.org/wiki/Cities:_Skylines\"\n            },\n            {\n                \"id\": 12556,\n                \"url\": \"https://www.facebook.com/CitiesGame\"\n            },\n            {\n                \"id\": 12557,\n                \"url\": \"https://twitter.com/Cities_PDX\"\n            },\n            {\n                \"id\": 12558,\n                \"url\": \"https://store.steampowered.com/app/255710\"\n            },\n            {\n                \"id\": 117670,\n                \"url\": \"https://www.reddit.com/r/CitiesSkylines\"\n            },\n            {\n                \"id\": 122134,\n                \"url\": \"https://www.instagram.com/cities_skylines_official\"\n            },\n            {\n                \"id\": 122135,\n                \"url\": \"https://www.youtube.com/channel/UCV9RoEcgAO1Uc7oxZGS8Lkw\"\n            },\n            {\n                \"id\": 168106,\n                \"url\": \"https://www.epicgames.com/store/de/product/cities-skylines/home\"\n            },\n            {\n                \"id\": 176116,\n                \"url\": \"https://www.citiesskylines.com/\"\n            },\n            {\n                \"id\": 176117,\n                \"url\": \"https://skylines.wikia.com/wiki/Skylines_Wikia\"\n            }\n        ]\n    },\n    {\n        \"id\": 3262,\n        \"alternative_names\": [\n            {\n                \"id\": 52740,\n                \"name\": \"GTA: VCS\"\n            },\n            {\n                \"id\": 52741,\n                \"name\": \"GTA: Vice City Stories\"\n            },\n            {\n                \"id\": 52742,\n                \"name\": \"VCS\"\n            },\n            {\n                \"id\": 52743,\n                \"name\": \"Vice City Stories\"\n            }\n        ],\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 847,\n            \"name\": \"Grand Theft Auto\",\n            \"slug\": \"grand-theft-auto\",\n            \"url\": \"https://www.igdb.com/collections/grand-theft-auto\"\n        },\n        \"cover\": {\n            \"id\": 120968,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2lc8.jpg\"\n        },\n        \"created_at\": 1388187388,\n        \"first_release_date\": 1162252800,\n        \"follows\": 50,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Multiplayer\",\n                \"slug\": \"multiplayer\",\n                \"url\": \"https://www.igdb.com/game_modes/multiplayer\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 10,\n                \"name\": \"Racing\",\n                \"url\": \"https://www.igdb.com/genres/racing\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Grand Theft Auto: Vice City Stories\",\n        \"platforms\": [\n            {\n                \"id\": 8,\n                \"name\": \"PlayStation 2\",\n                \"url\": \"https://www.igdb.com/platforms/ps2\"\n            },\n            {\n                \"id\": 38,\n                \"name\": \"PlayStation Portable\",\n                \"url\": \"https://www.igdb.com/platforms/psp\"\n            }\n        ],\n        \"rating\": 75.1641967994893,\n        \"rating_count\": 135,\n        \"release_dates\": [\n            {\n                \"id\": 7462,\n                \"human\": \"Oct 31, 2006\"\n            },\n            {\n                \"id\": 7463,\n                \"human\": \"Mar 06, 2007\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 8566,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/u8admqzvqtrehyy9n9du.jpg\"\n            },\n            {\n                \"id\": 8567,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ig6unih5hvea9aurbd1c.jpg\"\n            },\n            {\n                \"id\": 8568,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/cdem3oyqr712ngtie8tn.jpg\"\n            }\n        ],\n        \"slug\": \"grand-theft-auto-vice-city-stories\",\n        \"storyline\": \"Vic Vance is a corporal in the U.S Army. He is a man who came from a poor family, with his brother suffering from fever and another lazy brother, and he is trying to make money for his dysfunctional family. He just arrived in Vice City in 1984 and he is now stationed at Fort Baxter. He arrives at the office of his supervisor, Sergeant Jerry Martinez, a corrupt officer of the Army who is a drug smuggler. He instructs Vic to manage a drug deal. Vic arrives on the buyer's yacht, but they are ambushed by unknown assailants who blow up the boat, leaving only Vic alive.\",\n        \"summary\": \"The PlayStation Portable follow-up to Rockstar's monumental handheld entry in the series, Grand Theft Auto: Liberty City Stories. As in Liberty City Stories, this game ventures back to the location of the second PS2 game.\",\n        \"total_rating\": 74.2487650664113,\n        \"total_rating_count\": 138,\n        \"url\": \"https://www.igdb.com/games/grand-theft-auto-vice-city-stories\",\n        \"videos\": [\n            {\n                \"id\": 1804,\n                \"name\": \"Trailer\",\n                \"video_id\": \"vEZzUMjSl8E\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 1078,\n                \"url\": \"http://gta.wikia.com/Grand_Theft_Auto:_Vice_City_Stories\"\n            },\n            {\n                \"id\": 112339,\n                \"url\": \"https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City_Stories\"\n            }\n        ]\n    },\n    {\n        \"id\": 3263,\n        \"alternative_names\": [\n            {\n                \"id\": 52705,\n                \"name\": \"GTA: Liberty City Stories\"\n            },\n            {\n                \"id\": 52706,\n                \"name\": \"GTA: LCS\"\n            },\n            {\n                \"id\": 52707,\n                \"name\": \"Liberty City Stories\"\n            }\n        ],\n        \"category\": 0,\n        \"collection\": {\n            \"id\": 847,\n            \"name\": \"Grand Theft Auto\",\n            \"slug\": \"grand-theft-auto\",\n            \"url\": \"https://www.igdb.com/collections/grand-theft-auto\"\n        },\n        \"cover\": {\n            \"id\": 120940,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2lbg.jpg\"\n        },\n        \"created_at\": 1388188516,\n        \"first_release_date\": 1130198400,\n        \"follows\": 53,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Multiplayer\",\n                \"slug\": \"multiplayer\",\n                \"url\": \"https://www.igdb.com/game_modes/multiplayer\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 10,\n                \"name\": \"Racing\",\n                \"url\": \"https://www.igdb.com/genres/racing\"\n            },\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Grand Theft Auto: Liberty City Stories\",\n        \"platforms\": [\n            {\n                \"id\": 8,\n                \"name\": \"PlayStation 2\",\n                \"url\": \"https://www.igdb.com/platforms/ps2\"\n            },\n            {\n                \"id\": 34,\n                \"name\": \"Android\",\n                \"url\": \"https://www.igdb.com/platforms/android\"\n            },\n            {\n                \"id\": 38,\n                \"name\": \"PlayStation Portable\",\n                \"url\": \"https://www.igdb.com/platforms/psp\"\n            },\n            {\n                \"id\": 39,\n                \"name\": \"iOS\",\n                \"url\": \"https://www.igdb.com/platforms/ios\"\n            }\n        ],\n        \"rating\": 73.1687656886078,\n        \"rating_count\": 136,\n        \"release_dates\": [\n            {\n                \"id\": 7464,\n                \"human\": \"Oct 25, 2005\"\n            },\n            {\n                \"id\": 7465,\n                \"human\": \"Jun 06, 2006\"\n            },\n            {\n                \"id\": 150023,\n                \"human\": \"Dec 17, 2015\"\n            },\n            {\n                \"id\": 182653,\n                \"human\": \"Feb 11, 2016\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 8562,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/ujxskohyr5oncsp0fefk.jpg\"\n            },\n            {\n                \"id\": 8563,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/k35y1ey5luvcqp7nefxm.jpg\"\n            },\n            {\n                \"id\": 8564,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/yiugeoije0hfr15jlkza.jpg\"\n            },\n            {\n                \"id\": 8565,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/g3d0rxwug9btxxc7bkjq.jpg\"\n            }\n        ],\n        \"slug\": \"grand-theft-auto-liberty-city-stories\",\n        \"storyline\": \"Toni Cipriani, having been forced into living abroad after killing a made man on the orders of Salvatore Leone, decides to return to Liberty City. Upon arrival Toni is greeted by Salvatore and a member of the Leone family, Vincenzo \\\"Lucky Vinnie\\\" Cilli, who rose to prominence during Toni's absence. Vincenzo is instructed by Salvatore to set Toni up with an apartment and job in Liberty City. Not long after, Toni quits upon the realization that Vincenzo had set up a job designed to ensure Toni would be caught by the police. Toni then begins working with a former member of the rival Sindacco crime family now loyal to Leone, J.D. O'Toole, but this is short-lived as another member of the Leone crime family is ordered to kill O'Toole on the same day he was intended to become a made man within the family.\",\n        \"summary\": \"There are a million stories in Liberty City. This one changes everything. Once a trusted wise guy in the Leone crime family, Toni Cipriani was forced into hiding after killing a made man. Now he's back and it's time for things to be put right.\\n\\nThe streets of Liberty City are in turmoil. Warring mafiosi vie for control as the town begins to self-destruct under waves of political corruption, organized crime, drug trafficking and union strikes. No one can be trusted as Toni tries to clean up the mess of the city's chaotic underworld. Deranged hit men, morally depraved tycoons, cynical politicians and his own mother stand in his way as Toni tries to bring the city under Leone control.\\n\\nForced to fight for his life in an odyssey that will shake Liberty City to its foundations, Toni must use any means necessary to secure his place in the leadership of the Leone family in a town up for grabs.\",\n        \"total_rating\": 78.4593828443039,\n        \"total_rating_count\": 140,\n        \"url\": \"https://www.igdb.com/games/grand-theft-auto-liberty-city-stories\",\n        \"videos\": [\n            {\n                \"id\": 1805,\n                \"name\": \"Trailer\",\n                \"video_id\": \"RZvrlXBT1OI\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 1079,\n                \"url\": \"http://gta.wikia.com/Grand_Theft_Auto:_Liberty_City_Stories\"\n            },\n            {\n                \"id\": 4919,\n                \"url\": \"http://www.rockstargames.com/libertycitystories/gta_lcs.html\"\n            },\n            {\n                \"id\": 76471,\n                \"url\": \"https://itunes.apple.com/us/app/grand-theft-auto-liberty-city-stories/id1061802598?mt=8&uo=4\"\n            },\n            {\n                \"id\": 123255,\n                \"url\": \"https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Liberty_City_Stories\"\n            },\n            {\n                \"id\": 128342,\n                \"url\": \"https://play.google.com/store/apps/details?id=com.rockstargames.gtalcs\"\n            }\n        ]\n    },\n    {\n        \"id\": 7003,\n        \"alternative_names\": [\n            {\n                \"id\": 46138,\n                \"name\": \"The Lost & Damned\"\n            },\n            {\n                \"id\": 46143,\n                \"name\": \"The Ballad of Gay Tony\"\n            },\n            {\n                \"id\": 52723,\n                \"name\": \"Episodes from Liberty City\"\n            },\n            {\n                \"id\": 52724,\n                \"name\": \"TBoGT\"\n            },\n            {\n                \"id\": 52725,\n                \"name\": \"GTA: Episodes from Liberty City\"\n            },\n            {\n                \"id\": 52726,\n                \"name\": \"EFLC\"\n            }\n        ],\n        \"category\": 3,\n        \"collection\": {\n            \"id\": 847,\n            \"name\": \"Grand Theft Auto\",\n            \"slug\": \"grand-theft-auto\",\n            \"url\": \"https://www.igdb.com/collections/grand-theft-auto\"\n        },\n        \"cover\": {\n            \"id\": 120938,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/co2lbe.jpg\"\n        },\n        \"created_at\": 1401214861,\n        \"first_release_date\": 1256774400,\n        \"follows\": 47,\n        \"game_modes\": [\n            {\n                \"id\": 1,\n                \"name\": \"Single player\",\n                \"slug\": \"single-player\",\n                \"url\": \"https://www.igdb.com/game_modes/single-player\"\n            },\n            {\n                \"id\": 2,\n                \"name\": \"Multiplayer\",\n                \"slug\": \"multiplayer\",\n                \"url\": \"https://www.igdb.com/game_modes/multiplayer\"\n            }\n        ],\n        \"genres\": [\n            {\n                \"id\": 31,\n                \"name\": \"Adventure\",\n                \"url\": \"https://www.igdb.com/genres/adventure\"\n            }\n        ],\n        \"name\": \"Grand Theft Auto: Episodes from Liberty City\",\n        \"platforms\": [\n            {\n                \"id\": 6,\n                \"name\": \"PC (Microsoft Windows)\",\n                \"url\": \"https://www.igdb.com/platforms/win\"\n            },\n            {\n                \"id\": 9,\n                \"name\": \"PlayStation 3\",\n                \"url\": \"https://www.igdb.com/platforms/ps3\"\n            },\n            {\n                \"id\": 12,\n                \"name\": \"Xbox 360\",\n                \"url\": \"https://www.igdb.com/platforms/xbox360\"\n            }\n        ],\n        \"rating\": 80.85060617229921,\n        \"rating_count\": 105,\n        \"release_dates\": [\n            {\n                \"id\": 17406,\n                \"human\": \"Oct 29, 2009\"\n            },\n            {\n                \"id\": 17408,\n                \"human\": \"Apr 13, 2010\"\n            },\n            {\n                \"id\": 17410,\n                \"human\": \"Apr 16, 2010\"\n            },\n            {\n                \"id\": 103348,\n                \"human\": \"Apr 13, 2010\"\n            },\n            {\n                \"id\": 103349,\n                \"human\": \"Apr 16, 2010\"\n            }\n        ],\n        \"screenshots\": [\n            {\n                \"id\": 38516,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/lmisogmuxcggtmq0msmf.jpg\"\n            },\n            {\n                \"id\": 38517,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/l9hry8ua8aeryj0oxk5m.jpg\"\n            },\n            {\n                \"id\": 38518,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/tlemvojasnpj1feoxicm.jpg\"\n            },\n            {\n                \"id\": 38519,\n                \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/tm31a4wi95emfnyp8u1u.jpg\"\n            }\n        ],\n        \"slug\": \"grand-theft-auto-episodes-from-liberty-city\",\n        \"summary\": \"Episodes from Liberty City is a standalone compilation of the episodes: Grand Theft Auto IV: Ballad of Gay Tony and Grand Theft Auto IV: The Lost and Damned\",\n        \"total_rating\": 82.3003030861496,\n        \"total_rating_count\": 114,\n        \"url\": \"https://www.igdb.com/games/grand-theft-auto-episodes-from-liberty-city\",\n        \"videos\": [\n            {\n                \"id\": 11132,\n                \"name\": \"Trailer\",\n                \"video_id\": \"GK5xAtCXVf0\"\n            }\n        ],\n        \"websites\": [\n            {\n                \"id\": 40721,\n                \"url\": \"https://store.steampowered.com/app/12220\"\n            },\n            {\n                \"id\": 40722,\n                \"url\": \"http://www.rockstargames.com/episodesfromlibertycity\"\n            }\n        ]\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add To Favorite",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"City Mysteries\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/game/addToFavorites",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"game",
+						"addToFavorites"
+					],
+					"query": [
+						{
+							"key": "followers",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "totalRating",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add To Favorite : 200",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"City Mysteries\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/addToFavorites",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"addToFavorites"
+							],
+							"query": [
+								{
+									"key": "followers",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:26:18 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"391-V3XtarvSMQYQz8f9L2/gRPKZWdc\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728213ae0ebb3223-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 85031,\n    \"category\": 0,\n    \"cover\": {\n        \"id\": 61466,\n        \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/yektasaxw6l4ejte7ljb.jpg\"\n    },\n    \"created_at\": 1517392813,\n    \"first_release_date\": 1404345600,\n    \"genres\": [\n        {\n            \"id\": 9,\n            \"name\": \"Puzzle\",\n            \"url\": \"https://www.igdb.com/genres/puzzle\"\n        }\n    ],\n    \"name\": \"City Mysteries\",\n    \"platforms\": [\n        {\n            \"id\": 37,\n            \"name\": \"Nintendo 3DS\",\n            \"url\": \"https://www.igdb.com/platforms/3ds\"\n        }\n    ],\n    \"release_dates\": [\n        {\n            \"id\": 138333,\n            \"human\": \"Jul 03, 2014\"\n        }\n    ],\n    \"screenshots\": [\n        {\n            \"id\": 155025,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/vqubr5dngvnav82gr2qq.jpg\"\n        },\n        {\n            \"id\": 155026,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/hef5xbwivlqhormbijmq.jpg\"\n        },\n        {\n            \"id\": 155027,\n            \"url\": \"//images.igdb.com/igdb/image/upload/t_thumb/z9cp1rt16dpybiqt5kcn.jpg\"\n        }\n    ],\n    \"slug\": \"city-mysteries\",\n    \"summary\": \"Search buildings, streets, landmarks as you seek and find hidden objects in New York, Paris, Moscow and London!\",\n    \"url\": \"https://www.igdb.com/games/city-mysteries\"\n}"
+				},
+				{
+					"name": "Game already in favorites",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"City Mysteries\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/addToFavorites",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"addToFavorites"
+							],
+							"query": [
+								{
+									"key": "followers",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:26:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"34-Dh5fQYzvXGtqTYbpNk4DQCi/kh4\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7282141f7d753223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Game already exist in your favourites!\"\n}"
+				},
+				{
+					"name": "Game Not Found",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"City Mysteries Test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/addToFavorites",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"addToFavorites"
+							],
+							"query": [
+								{
+									"key": "followers",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:27:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2c-WHKsQFhU7Uo2JJzzO8H9GGHtpS8\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7282154d9b253223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Game with that name not found!\"\n}"
+				},
+				{
+					"name": "Missing details",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/addToFavorites",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"addToFavorites"
+							],
+							"query": [
+								{
+									"key": "followers",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "rating",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "totalRating",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:27:51 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "103"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"67-7yx20oOr58slqKAG3sjydwi1I3I\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7282160a790a3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": [\n        \"name should not be empty\",\n        \"name must be a string\"\n    ],\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "My favorites games",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "{{TOKEN}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/game/my-games?limit=10",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"game",
+						"my-games"
+					],
+					"query": [
+						{
+							"key": "skip",
+							"value": "0",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "My favorites games : 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/my-games?skip=0&limit=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"my-games"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:12:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"a6-oJUI/Mfimm5+9KLbQN+2z3kiLrM\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "200"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7281ffb13b3a3223-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"6043454d-cb34-4d07-8151-383e8ee525e4\",\n        \"name\": \"City Mysteries\",\n        \"gameId\": \"85031\",\n        \"createdAt\": \"2022-07-09T15:09:36.562Z\",\n        \"updatedAt\": \"2022-07-09T15:09:36.562Z\"\n    }\n]"
+				},
+				{
+					"name": "Missing Details",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-access-token",
+								"value": "{{TOKEN}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/game/my-games?limit=10",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"game",
+								"my-games"
+							],
+							"query": [
+								{
+									"key": "skip",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 09 Jul 2022 15:29:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "99"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "vary",
+							"value": "Origin, Accept-Encoding"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"63-BAojB7qX+mLY6LkS424DwNJnIw8\""
+						},
+						{
+							"key": "x-do-app-origin",
+							"value": "09ad7e37-d254-46ac-b47b-d72d40392a14"
+						},
+						{
+							"key": "cache-control",
+							"value": "private"
+						},
+						{
+							"key": "x-do-orig-status",
+							"value": "400"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "MISS"
+						},
+						{
+							"key": "Expect-CT",
+							"value": "max-age=604800, report-uri=\"https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct\""
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "728218545a9d3223-BOM"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Validation failed (numeric string is expected)\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		}
+	]
+}
