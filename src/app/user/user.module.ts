@@ -7,6 +7,7 @@ import { UserEntity } from './user.entity';
 import { UserController } from './user.controller';
 import { UserService } from './user.service';
 import { JwtModuleOptions } from '@nestjs/jwt/dist/interfaces/jwt-module-options.interface';
+import { AuthGuard } from '../../common/guards/auth.guard';
 
 @Module({
   imports: [

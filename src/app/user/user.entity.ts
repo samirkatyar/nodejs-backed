@@ -3,10 +3,12 @@ import {
   CreateDateColumn,
   Entity,
   Index,
+  OneToMany,
   PrimaryGeneratedColumn,
   Unique,
   UpdateDateColumn,
 } from 'typeorm';
+import { GameEntity } from '../game/game.entity';
 
 @Entity({ name: 'user' })
 @Index(['email'])
@@ -26,6 +28,9 @@ export class UserEntity {
 
   @Column()
   lastName: string;
+
+  @OneToMany(() => GameEntity, (game) => game.user)
+  games: GameEntity[];
 
   @CreateDateColumn()
   createdAt: Date;

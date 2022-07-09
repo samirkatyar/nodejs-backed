@@ -1,10 +1,25 @@
-import { Controller, Get, ParseIntPipe, Query } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  ParseIntPipe,
+  Put,
+  Query,
+  Req,
+} from '@nestjs/common';
 import { IgdbService } from './igdb.service';
 import { IgdbGame } from './dto/igdb-game';
+import { IUser } from '../../common/interface/user';
+import { AddFavouriteGame } from './dto/add-favourite-game';
+import { GameService } from './game.service';
+import { GameEntity } from './game.entity';
 
 @Controller('game')
 export class GameController {
-  constructor(private igdbService: IgdbService) {}
+  constructor(
+    private readonly igdbService: IgdbService,
+    private readonly gameService: GameService,
+  ) {}
 
   /**
    * We have two apis for get all game and user input games
@@ -31,5 +46,24 @@ export class GameController {
       totalRating,
     };
     return this.igdbService.getGamesFromIgDbApis({ skip, limit, name, query });
+  }
+
+  @Put('addToFavorites')
+  addFavouriteGame(
+    @Req() request: Request & IUser,
+    @Body() payload: AddFavouriteGame,
+  ): Promise<IgdbGame> {
+    const userId = request.user.id;
+    return this.gameService.addFavouriteGame({ payload, userId });
+  }
+
+  @Get('my-games')
+  listAllFavouriteGames(
+    @Req() request: Request & { user: { id: string; email: string } },
+    @Query('skip', ParseIntPipe) skip: number,
+    @Query('limit', ParseIntPipe) limit: number,
+  ): Promise<GameEntity[]> {
+    const userId = request.user.id;
+    return this.gameService.listAllFavouriteGames({ userId, skip, limit });
   }
 }

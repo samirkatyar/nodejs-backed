@@ -8,7 +8,7 @@ export class Game {
   name: string;
 
   @IsString()
-  igdbGameId: string;
+  gameId: string;
 
   @IsDate()
   createdAt: Date;

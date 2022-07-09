@@ -10,6 +10,7 @@ import { JwtModuleOptions } from '@nestjs/jwt/dist/interfaces/jwt-module-options
 import { UserModule } from './app/user/user.module';
 import { LoggerModule } from 'nestjs-pino';
 import { GameModule } from './app/game/game.module';
+import { AuthGuard } from './common/guards/auth.guard';
 
 @Module({
   imports: [
@@ -48,6 +49,10 @@ import { GameModule } from './app/game/game.module';
     GameModule,
   ],
   controllers: [AppController],
-  providers: [AppService, { provide: 'APP_PIPE', useClass: ValidationPipe }],
+  providers: [
+    AppService,
+    { provide: 'APP_PIPE', useClass: ValidationPipe },
+    { provide: 'APP_GUARD', useClass: AuthGuard },
+  ],
 })
 export class AppModule {}

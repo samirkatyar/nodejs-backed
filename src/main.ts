@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     cors: {
       methods: ['GET', 'POST', 'PUT'],
-      allowedHeaders: ['X-Access-Token', 'Content-Type'],
+      allowedHeaders: ['x-access-token', 'Content-Type'],
       origin: true,
     },
   });

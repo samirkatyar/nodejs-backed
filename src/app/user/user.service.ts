@@ -10,7 +10,7 @@ import { ConfigType } from '@nestjs/config';
 import { JwtService } from '@nestjs/jwt';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
-import { Repository } from 'typeorm';
+import { FindOneOptions, Repository } from 'typeorm';
 import applicationConfig from '../../config/application.config';
 import { Login, LoginResponse } from './dto/login';
 import { UserEntity } from './user.entity';
@@ -113,5 +113,9 @@ export class UserService {
         message: ERROR_MESSAGE.INTERNAL_SERVER_ERROR,
       });
     }
+  }
+
+  async findOne(query: FindOneOptions<UserEntity>): Promise<UserEntity> {
+    return this.userRepository.findOne(query);
   }
 }
